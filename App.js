@@ -11,6 +11,7 @@ import "react-native-gesture-handler";
 const Stack = createStackNavigator()
 
 export default function App() {
+  
   return (
       <NavigationContainer>
         <Stack.Navigator initialRouteName="Home" screenOptions={{headerShown: false}} >
