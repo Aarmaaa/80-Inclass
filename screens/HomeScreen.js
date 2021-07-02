@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View, TouchableOpacity, StatusBar, SafeAreaView, Platform, ImageBackground,Image } from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity, StatusBar, SafeAreaView, Platform, ImageBackground,Image, Dimensions } from 'react-native';
 
 export default class HomeScreen extends React.Component{
 
@@ -37,15 +37,6 @@ export default class HomeScreen extends React.Component{
                             <Image source={require("../assets/meteor.png")} style={styles.iconImage} />
                         </TouchableOpacity>
 
-                        <TouchableOpacity
-                        style = {styles.button}
-                        onPress={()=>{
-                            this.props.navigation.navigate("Updates")
-                        }}
-                        >
-                            <Text style = {styles.text}>News Updates</Text>
-                            <Text style = {styles.bgdigit}>3</Text>
-                        </TouchableOpacity>
                    
                     </ImageBackground>
                 </SafeAreaView>
@@ -62,7 +53,9 @@ const styles = StyleSheet.create({
   },
   bg: {
      flex: 1,
-     resizeMode: 'cover'
+     resizeMode: 'cover',
+     width: Dimensions.get("window").width,
+     height: Dimensions.get("window").height
   },
   safeArea:{
     marginTop: Platform.OS === "android" ? StatusBar.currentHeight : 0

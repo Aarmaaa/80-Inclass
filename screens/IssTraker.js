@@ -107,11 +107,13 @@ const styles = StyleSheet.create({
         alignItems: 'center',
     },
     safeArea:{
-      marginTop: Platform.OS === "android" ? StatusBar.currentHeight : 0
+        marginTop: Platform.OS === "android" ? StatusBar.currentHeight : 0
     },
     bg: {
         flex: 1,
-        resizeMode: 'cover'
+        resizeMode: 'cover',
+        width: Dimensions.get("window").width,
+        height: Dimensions.get("window").height
      },
     titleBar:{
         flex:0.15,

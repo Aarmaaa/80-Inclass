@@ -3,7 +3,6 @@ import { StyleSheet, Text, View } from 'react-native';
 import HomeScreen from './screens/HomeScreen';
 import IssTracker from './screens/IssTraker';
 import Meteor from './screens/Meteor';
-import Updates from './screens/Updates';
 import { createStackNavigator } from '@react-navigation/stack';
 import { NavigationContainer } from '@react-navigation/native';
 import "react-native-gesture-handler";
@@ -18,7 +17,6 @@ export default function App() {
         <Stack.Screen name="Home" component={HomeScreen} />
         <Stack.Screen name="IssTracker" component={IssTracker} />
         <Stack.Screen name="Meteors" component={Meteor} />
-        <Stack.Screen name="Updates" component={Updates} />
         </Stack.Navigator>
       </NavigationContainer>
   );
